@@ -1,0 +1,316 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2e; /* Base */
+    color: #cdd6f4; /* Text */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: filter 0.3s ease;
+}
+
+header {
+    background-color: #313244; /* Surface0 */
+    color: #cdd6f4; /* Text */
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 4px 6px rgba(203, 166, 247, 0.5);
+    border-bottom: 2px solid #cba6f7; /* Mauve for a subtle accent */
+}
+
+main {
+    padding: 2em;
+    padding-bottom: 140px; /* Adjust this value based on the footer height */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em; /* Increased gap for larger cards */
+    justify-content: center;
+}
+
+.nft-item {
+    background-color: #45475a; /* Surface1 */
+    border-radius: 16px;
+    overflow: hidden; /* Ensure no overflow */
+    width: 400px; /* Increased width */
+    height: 500px; /* Increased height */
+    max-width: 100%; /* Ensure it doesn't overflow the screen */
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 1000px; /* For 3D effect */
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    transform-style: preserve-3d; /* Necessary for 3D flip effect */
+}
+
+.nft-item.flip .nft-front {
+    transform: rotateY(180deg); /* Flip the front side */
+}
+
+.nft-item.flip .nft-back {
+    transform: rotateY(0deg); /* Show the back side */
+}
+
+.nft-front, .nft-back {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.nft-front {
+    z-index: 2;
+}
+
+.nft-back {
+    z-index: 1;
+    background-color: #cba6f7; /* New background color for the back side */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    color: #333;
+    font-size: 1.2em; /* Default font size for back text */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.three-dots {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    transition: background 0.3s ease;
+}
+
+.three-dots:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.three-dots .middle-dot {
+    width: 10px;
+    height: 10px;
+    background: #1e1e2e;
+    border-radius: 50%;
+}
+
+
+.nft-item.flip .flip-back-button {
+    display: flex; /* Show button on the back */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.nft-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nft-item .top-bar,
+.nft-item .description-container {
+    position: absolute;
+    width: 100%;
+    color: #1e1e2e; /* Darker text color */
+    background: rgba(255, 255, 255, 0.5); /* Light background with transparency */
+    text-align: center;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    z-index: 2; /* Ensure it is above other content */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* Hidden by default */
+}
+
+.nft-item:hover .top-bar,
+.nft-item:hover .description-container {
+    opacity: 1; /* Show the top bar and description */
+    transform: translateY(0); /* Slide into view */
+}
+
+.top-bar {
+    top: 0; /* At the top of the card */
+    border-radius: 16px 16px 0 0; /* Rounded edges */
+    transform: translateY(-100%); /* Slide the top bar out of view by default */
+}
+
+.description-container {
+    bottom: 0; /* Position at the bottom of the card */
+    padding: 1em; /* Consistent padding */
+    transform: translateY(100%);
+    border-radius: 0 0 16px 16px; /* Rounded edges at the bottom */
+}
+
+.metadata-title {
+    font-size: 1.3em; /* Fixed font size for title */
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5em;
+    color: #1e1e2e; /* Dark text color */
+    background-color: rgba(69, 71, 90, 0.2); /* Slightly transparent background matching NFT background */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center title text */
+    width: 100%; /* Full width to ensure alignment */
+}
+
+.metadata-blockchain a {
+    color: #1e1e2e; /* Highlight color for contract address */
+}
+
+.metadata-blockchain a:hover {
+    text-decoration: none;
+    color: #f38ba8;
+}
+
+
+/* Footer styling */
+footer {
+    background-color: rgba(49, 50, 68, 0.9); /* Surface0 with slight transparency */
+    color: #cdd6f4; /* Text */
+    padding: 0.5em 2em; /* Reduced padding */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2); /* Slight shadow */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transform: translateY(100%); /* Initially hidden */
+    opacity: 0; /* Hidden at first */
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.social-media a {
+    margin: 0 0.5rem;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle; /* Aligns the icons properly */
+}
+
+/* Footer visibility animation */
+footer.hidden {
+    transform: translateY(100%);
+}
+
+/* Body blur effect */
+body.blur {
+    filter: blur(8px);
+    overflow: hidden; /* Prevent scrolling when blurred */
+}
+
+/* NFT item zoom effect */
+.nft-item.zoomed {
+    position: fixed; /* Fix position to overlay the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    z-index: 1000; /* High z-index to overlay other content */
+    transition: transform 0.3s ease;
+}
+
+.nft-item.zoomed .nft-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2); /* Center the image and scale */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+.nft-item.zoomed .description-container,
+.nft-item.zoomed .top-bar {
+    position: fixed;
+    width: 100%;
+    z-index: 1001; /* Ensure above the image */
+    text-align: center;
+}
+
+.nft-item.zoomed .description-container {
+    bottom: 10%;
+    left: 0;
+}
+
+.nft-item.zoomed .top-bar {
+    top: 10%;
+    background: rgba(203, 166, 247, 0.9); /* Mauve with opacity */
+}
+
+/* Back of the NFT card adjustments */
+.nft-back {
+    z-index: 1;
+    transform: rotateY(180deg);
+    background-color: #cba6f7; /* Background color */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    color: #333;
+    font-size: 1.2em; /* Responsive font size for back text */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.info-title {
+    font-size: 2em; /* Adjust this value as needed */
+    font-weight: bold; /* Optional: makes the title bold */
+    color: #1e1e2e; /* Optional: sets the text color */
+    margin: 0;
+    padding: 0.5em 0; /* Optional: adds vertical padding */
+}
+
+
+
+.metadata-title {
+    font-size: 1.3em; /* Fixed font size for title */
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5em;
+    color: #1e1e2e; /* Dark text color */
+    background-color: rgba(69, 71, 90, 0.2); /* Slightly transparent background matching NFT background */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center title text */
+    width: 100%; /* Full width to ensure alignment */
+}
+
+.back-content {
+    text-align: center; /* Center all text */
+    margin-top: 1em; /* Margin for spacing */
+}
+
+.back-content p {
+    margin: 8px 0;
+    font-size: 1em; /* Responsive font size for back content text */
+    line-height: 1.4; /* Adjust line height for readability */
+}
+
+.back-content strong {
+    font-weight: bold;
+    font-size: 1.2em; /* Responsive font size for back content strong text */
+}
