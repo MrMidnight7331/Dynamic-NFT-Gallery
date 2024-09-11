@@ -1,8 +1,8 @@
 // Store the API key and wallet addresses in variables
-const apiKey = 'V02Btj6wPHcO9W5SYKk5cocTEli93zbV';
+const apiKey = 'YourApiKey';
 const walletAddresses = [
-    '0x4bBB452a380A73E8c969055A23d71AB4487c32AD',
-    '0x939A9353e1a72e5d6Da07424c74815a6651a86f4'
+    'YourWalletAddress',
+    'YourWalletAddress'
 ];
 
 // Fetch NFTs from Alchemy API and return raw response
