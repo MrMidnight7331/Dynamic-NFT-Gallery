@@ -47,14 +47,20 @@ If you’re interested in customizing or using this site for your own purposes, 
 
 Feel free to contribute to this project or use it as a base for your own NFT gallery!
 
-## Technologies Used
+## Services:
+
+If you have no idea about github or technology, I could:
+- walk you through the setup process for a cup of coffee
+- remote desktop to your pc and set it up for you for 5 cups of coffee
+
+## Technologies Used:
 
 - HTML
 - CSS
 - JavaScript
 - Alchemy API
 
-## Changelog
+## Changelog:
 - V1.0 
     - Initial Deployment
 - V1.1
@@ -76,6 +82,7 @@ Feel free to contribute to this project or use it as a base for your own NFT gal
 - Add options to view NFTs from other addresses
 - Add more customization methods like color scheme
 - ~~Add more info on the back side of the card. Turn around transition with smooth animation~~
+- Make a official service out of it like link tree. (Need a team)
 
 
 ## Contact
