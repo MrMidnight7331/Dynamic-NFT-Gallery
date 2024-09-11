@@ -43,6 +43,8 @@ If you’re interested in customizing or using this site for your own purposes, 
 - Create a github pages website: [Tutorial](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 - Enjoy!
 
+(If you are also a developer and wants to do more with the api, I included a test.js that will pull the raw json response just like app.js!
+
 Feel free to contribute to this project or use it as a base for your own NFT gallery!
 
 ## Technologies Used
