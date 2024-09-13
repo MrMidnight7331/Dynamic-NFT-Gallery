@@ -27,9 +27,10 @@ I created this website initially to showcase my own NFT collection so I could pu
 
 If you’re interested in customizing or using this site for your own purposes, you can copy the code from this repository. Here’s how:
 
-(THIS TUTORIAL ASSUMES THAT YOU ALREADY HAVE GITHUB ACCOUNT SET UP! You could also host this on a VPS. Your choice! :3)
+(THIS TUTORIAL ASSUMES THAT YOU ALREADY HAVE GITHUB ACCOUNT SET UP. If NOT please follow the offical github setup tutorial here: [Github Getting Started](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github). You could also host this on a VPS. Your choice! :3)
 
-- Download the repository: `git clone https://github.com/MrMidnight7331/mrmidnight7331.github.io.git`
+- Download the repository: `git clone https://github.com/MrMidnight7331/mrmidnight7331.github.io.git` or download it as a zip and decompress it.
+- Create a GitHub repository with the name: {YourUserName}.github.io (Example: mrmidnight7331.github.io
 - Customize the config.json file:
     -Make an account on [Alchemy](https://www.alchemy.com/nft-api)
     - Get the API key and put it into config.json
