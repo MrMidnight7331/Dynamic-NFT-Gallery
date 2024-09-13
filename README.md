@@ -30,7 +30,7 @@ If you’re interested in customizing or using this site for your own purposes, 
 (THIS TUTORIAL ASSUMES THAT YOU ALREADY HAVE GITHUB ACCOUNT SET UP. If NOT please follow the offical github setup tutorial here: [Github Getting Started](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github). You could also host this on a VPS. Your choice! :3)
 
 - Download the repository: `git clone https://github.com/MrMidnight7331/mrmidnight7331.github.io.git` or download it as a zip and decompress it.
-- Create a GitHub repository with the name: {YourUserName}.github.io (Example: mrmidnight7331.github.io
+- Create a GitHub repository with the name: {YourUserName}.github.io (Example: mrmidnight7331.github.io): [Tutorial](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 - Customize the config.json file:
     -Make an account on [Alchemy](https://www.alchemy.com/nft-api)
     - Get the API key and put it into config.json
@@ -40,8 +40,7 @@ If you’re interested in customizing or using this site for your own purposes, 
 
 - Customize your profile picture:
     - Put your own pfp.ico into "icons"
-
-- Create a github pages website: [Tutorial](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+- Upload all the contents to the repository and wait for deployment
 - Enjoy!
 
 (If you are also a developer and wants to do more with the api, I included a test.js that will pull the raw json response just like app.js!)
