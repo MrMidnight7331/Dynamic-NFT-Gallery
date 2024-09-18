@@ -1,5 +1,5 @@
 # Dynamic NFT Gallery
-**Current Version: 1.3**
+**Current Version: 1.4**
 
 ## Introduction
 
@@ -75,6 +75,13 @@ If you have no idea about github or technology, I could:
     - Added Light / Dark mode toggle
     - Added cookie to remember modes
     - Centered Button
+- V1.4
+    - Integrated Base Blockchain
+    - Updated Color Scheme
+    - Better Animation
+    - General Bug Fixes
+    - Appearance Fixes
+    - Footer fixes
 
 ## Future Plans:
 - ~~Add collection address to title of card instead of wallet address.~~
