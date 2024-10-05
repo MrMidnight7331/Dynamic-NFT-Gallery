@@ -1,5 +1,5 @@
 # Dynamic NFT Gallery
-**Current Version: 1.4**
+**Current Version: 1.5**
 
 ## Introduction
 
@@ -82,6 +82,10 @@ If you have no idea about github or technology, I could:
     - General Bug Fixes
     - Appearance Fixes
     - Footer fixes
+- V1.5
+    - Integrated Ronin Blockchain
+    - Integrated Sidekick NFTs
+    - Integrated Pixels Pets NFTs
 
 ## Future Plans:
 - ~~Add collection address to title of card instead of wallet address.~~
