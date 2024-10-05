@@ -32,8 +32,9 @@ If you’re interested in customizing or using this site for your own purposes, 
 - Download the repository: `git clone https://github.com/MrMidnight7331/mrmidnight7331.github.io.git` or download it as a zip and decompress it.
 - Create a GitHub repository with the name: {YourUserName}.github.io (Example: mrmidnight7331.github.io): [Tutorial](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 - Customize the config.json file:
-    -Make an account on [Alchemy](https://www.alchemy.com/nft-api)
+    - Make an account on [Alchemy](https://www.alchemy.com/nft-api)
     - Get the API key and put it into config.json
+    - Login into your [SkyMavis](https://developers.skymavis.com/console/applications/) Developer account and get your API key for the ronin api (if you want to use ronin chain)
 
     - Change the wallet address to your own ethereum addresses. It works with multiple addresses!
     - Change your username
