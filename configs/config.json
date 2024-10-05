@@ -1,6 +1,7 @@
 {
     "username": "YourName",
     "apiKey": "YourAlchemyAPIKey",
+    "roninKey": "YourSkymavisAPIKey"
     "walletAddresses": [
         "YourWalletAddress1",
         "YourWalletAddress2"
