@@ -1,5 +1,5 @@
 # Dynamic NFT Gallery
-**Current Version: 1.5**
+**Current Version: Pre-1.0.0**
 
 ## Introduction
 
